@@ -1,95 +1,46 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Head from 'next/head'
+import styles from './Home.module.css'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
+    <div className={styles.container}>
+      <Head>
+        <title>Gaming Hub</title>
+        <meta name="description" content="Welcome to the Gaming Hub" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main className={styles.main}>
+        <h1 className={styles.title}>
+          Welcome to <a href="#">Gaming Hub!</a>
+        </h1>
+
+        <p className={styles.description}>
+          Discover the latest in gaming news, in-depth reviews, and more. Explore our site for comprehensive content tailored for gaming enthusiasts.
         </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
+
+        <div className={styles.grid}>
+          <a href="/news" className={styles.card}>
+            <h2>News &rarr;</h2>
+            <p>Find the latest gaming news and updates from around the world.</p>
+          </a>
+
+          <a href="/reviews" className={styles.card}>
+            <h2>Reviews &rarr;</h2>
+            <p>Read detailed reviews on the newest games, with insights and ratings.</p>
+          </a>
+
+          <a href="/about" className={styles.card}>
+            <h2>About Us &rarr;</h2>
+            <p>Learn more about our mission and the team behind Gaming Hub.</p>
+          </a>
+
+          <a href="/contact" className={styles.card}>
+            <h2>Contact Us &rarr;</h2>
+            <p>Get in touch with us for any inquiries or feedback.</p>
           </a>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+      </main>
+    </div>
+  )
 }
